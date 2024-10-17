@@ -14,6 +14,9 @@ import * as Toast from '#/view/com/util/Toast'
  * clipboard.
  */
 export async function shareUrl(url: string) {
+  setStringAsync(url)
+  Toast.show(t`Copied to clipboard`, 'clipboard-check')
+  /*
   if (isAndroid) {
     await Share.share({message: url})
   } else if (isIOS) {
@@ -24,4 +27,5 @@ export async function shareUrl(url: string) {
     setStringAsync(url)
     Toast.show(t`Copied to clipboard`, 'clipboard-check')
   }
+  */
 }
